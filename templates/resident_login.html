@@ -1,0 +1,47 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+      background-color: lightblue;
+    }
+    h1{
+      margin: 0;
+      font-size: 40px;
+      line-height: 75px;
+      font-weight: 100;
+      text-align: center;
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    td[colspan="2"] {
+      text-align: center;
+    }
+  </style>
+
+<body>
+  <h1>Log In</h1>
+  {% if error %}
+    <p><strong>Error:</strong> {{ error }}</p>
+  {% endif %}
+  <form method="POST" action="/residentHome">
+      <table class="center">
+          <tr>
+              <td>Resident ID: </td>
+              <td><input type="number" name="resident_id" required></td>
+          </tr>
+          <tr>
+              <td>Password (Passport Number): </td>
+              <td><input type="password" name="password" required></td>
+          </tr>
+          <tr>
+              <td colspan="2" class="center"><input type="submit" value="Submit"></td>
+          </tr>
+      </table>
+  </form>
+
+</body>
+
+</html>

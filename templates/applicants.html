@@ -1,0 +1,94 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+      background-color: lightblue;
+    }
+    <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+    h1{
+      margin: 0;
+      font-size: 40px;
+      line-height: 75px;
+      font-weight: 100;
+      text-align: center;
+    }
+    h2{
+      margin: 0;
+      font-size: 25px;
+      line-height: 50px;
+      font-weight: 100;
+      text-align: center;
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    td[colspan="2"] {
+      text-align: center;
+    }
+  </style>
+
+
+<body>
+  <h1>Welcome to International House! We are really glad that you chose us!</h1>
+
+  <h2>Please fill in your details below and wait for Admissions to get back to you :</h2>
+  {% if error %}
+    <p><strong>Error:</strong> {{ error }}</p>
+  {% endif %}
+  <form method="POST" action="/add_new_applicants">
+      <table class="center">
+          <tr>
+              <td>Name: </td>
+              <td><input type="text" name="name" required></td>
+          </tr>
+          <tr>
+              <td>Citizenship: </td>
+              <td><input type="text" name="citizenship" required></td>
+          </tr>
+          <tr>
+              <td>Passport Number: </td>
+              <td><input type="text" name="passport_number" required></td>
+          </tr>
+          <tr>
+              <td>Date of Birth: </td>
+              <td><input type="date" id="date_of_birth" name="date_of_birth" value={{todays_date}} min="1900-01-01" max={{todays_date}} required></td>
+          </tr>
+          <tr>
+              <td>Gender: </td>
+              <td><select class="form-control" id="gender" name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>Room Preference: </td>
+              <td><select class="form-control" id="room_preference" name="room_preference">
+                  <option value="with sink">With Sink</option>
+                  <option value="without sink">Without Sink</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>Start Date: </td>
+              <td><input type="date" id="start_date" name="start_date" value={{todays_date}} min={{todays_date}} required></td>
+          </tr>
+          <tr>
+              <td>End Date: </td>
+              <td><input type="date" id="end_date" name="end_date" value={{todays_date}} min={{todays_date}} required></td>
+          </tr>
+          <tr>
+              <td colspan="2" class="center"><input type="submit" value="Submit"></td>
+          </tr>
+      </table>
+  </form>
+
+</body>
+
+</html>

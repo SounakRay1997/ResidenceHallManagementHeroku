@@ -1,0 +1,7 @@
+flask
+sqlalchemy
+click
+psycopg2
+Flask-Session
+gunicorn
+Flask-SQLAlchemy
