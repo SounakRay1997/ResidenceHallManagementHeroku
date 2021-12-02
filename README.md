@@ -29,3 +29,7 @@ Interesting web-pages:
 1. Resident page : The resident home page enables residents to raise new task requests as well as has navigation to the billing summary page where residents can view the payment history, outstanding rent and current dining hall credits, the page also navigates to task requests page to view the task requests and finance requests raised and their current status. The page also navigates to the order food page where residents can order food of their choice.
 2. Employees Home page : Every employee will see a view depending on their department. Employees of the admission department can approve applicants and assign room
 numbers as well as reject applicants. Employees of the finance department can approve finance requests and add updated amounts or reject pending requests. The employees of the Facilities department can update task priority and status of task completion.
+
+## Heroku Deployment Link
+
+https://residence-hall-management.herokuapp.com/
